@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <title>엿이나 먹어라</title>
+    <script type="text/javascript" src="https://new-year.spartacodingclub.kr/newyear.js"></script>
+    <style>
+        body {
+            background-color: ivory;
+            background-image: url(엿.png);
+            background-position: 1000px 700px;
+        }
+
+        * {
+            font-family: 'Yeon Sung', cursive;
+        }
+
+        .rtan {
+            display: block;
+            width: 200px;
+            height: 200px;
+            border: solid 3px  rgb(70, 1, 1);
+            background-color:  rgb(70, 1, 1);
+            box-shadow: 0px 0px 10px 0px rgb(70, 1, 1);
+            border-radius: 200px;
+            margin: 10px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-size: 32px;
+            text-align: center;
+            text-decoration: none;
+            margin: 80px auto 50px auto;
+            background-image: url(조유섭-1.jpg);
+
+        }
+
+        .title {
+            color: rgb(70, 1, 1);
+            text-align: center;
+            font-size: 32px;
+        }
+
+        .msg {
+            color:  rgb(70, 1, 1);
+            text-align: center;
+            font-size: 32px;
+            line-height: 48px;
+            display: none;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        .btn-back {
+            width: 150px;
+            height: 50px;
+
+            color: rgb(70, 1, 1);
+            border: 2px solid rgb(70, 1, 1);
+            background-color: white;
+
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .btn-share {
+            width: 150px;
+            height: 50px;
+
+            color: white;
+            border: 2px solid  rgb(70, 1, 1);
+            background-color:  rgb(70, 1, 1);
+
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .dut {
+
+        }
+
+        @media screen and (max-width: 780px) {
+            body {
+                background-position: 70px -70px;
+                background-size: 500px;
+            }
+
+            .rtan {
+                margin-top: 50px;
+            }
+
+            .msg {
+                font-size: 24px;
+                line-height: 36px;
+                margin-bottom: 36px;
+                padding: 10px;
+            }
+
+            .msg>br {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        function back() {
+            let url = window.location.href;
+            let new_url = url.split('Untitled-3')[0] + 'Untitled-2.html';
+            window.location.href = new_url;
+        }
+        function share() {
+            var t = document.createElement("textarea");
+            document.body.appendChild(t);
+            t.value = window.location.href;
+            t.select();
+            document.execCommand('copy');
+            document.body.removeChild(t);
+            alert('복사 완료!')
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
